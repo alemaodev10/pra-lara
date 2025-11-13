@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Feliz Aniversário — Lara Bilk</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="header">
+      <div class="title">
+        <h1>Feliz Aniversário</h1>
+        <h2 class="name">Lara Bilk</h2>
+      </div>
+      <div class="cta">
+        <button id="playMusic" class="btn">Tocar música 🎵</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="left">
+        <div class="card message-card">
+          <h3>Para você, Lara</h3>
+          <p class="message">Você é a razão dos meus sorrisos. Que seu dia seja tão incrível quanto o amor que sinto por você.</p>
+          <div class="signature">Com amor,te desejo tudo de bom que deus sempre te abençoa mesmo eu sendo um mlk chato pra ti puxando no seu pé por ciumes besta mais acho que voce me entenderia 
+            que eu te amo e nao quero te perder pra qualquer mlk que só queira te usar mais voce sabe da suas escolhas, mais parabens pelos seus 
+            15 anos espero muita conquista sua e muito mais eu te amo e nao sei aonde panhar esse amor todo que eu sinto por vc obrigado por tudo vlw te amo  <strong>André 💖</strong></div>
+        </div>
+
+        <div class="particles" aria-hidden="true"></div>
+      </section>
+
+      <section class="right">
+        <div class="carousel" id="carousel">
+          <div class="slides">
+            <img src="img1.jpg" alt="foto 1">
+            <img src="img2.jpg" alt="foto 2">
+            <img src="img3.jpg" alt="foto 3">
+          </div>
+          <button class="nav prev" id="prev">‹</button>
+          <button class="nav next" id="next">›</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>Abra em tela cheia para melhores efeitos ✨</div>
+      <div class="small">Feito com ♥ para Lara Bilk</div>
+    </footer>
+  </div>
+
+  <!-- Modal for YouTube player -->
+  <div id="videoModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeModal" class="modal-close">✕</button>
+      <div class="video-wrap" id="videoWrap">
+        <!-- YouTube iframe will be injected here -->
+      </div>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>

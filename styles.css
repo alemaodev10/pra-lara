@@ -1,0 +1,45 @@
+
+/* Modern Elegant — preto e dourado */
+:root{
+  --bg:#070707;
+  --card:#0f0f10;
+  --gold:linear-gradient(90deg,#d4af37,#ffd66b);
+  --accent:#d4af37;
+  --muted:rgba(255,255,255,0.75);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:var(--bg);color:#fff;-webkit-font-smoothing:antialiased}
+.app{min-height:100vh;display:flex;flex-direction:column;gap:18px;padding:28px}
+.header{display:flex;justify-content:space-between;align-items:center}
+.title h1{margin:0;font-weight:600;letter-spacing:1px;color:var(--muted);font-size:20px}
+.title .name{margin:2px 0 0;font-size:34px;letter-spacing:0.6px;background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
+.btn{background:transparent;border:1px solid rgba(212,175,55,0.18);padding:10px 14px;border-radius:10px;color:var(--accent);cursor:pointer;font-weight:700}
+.main{display:grid;grid-template-columns:1fr 520px;gap:24px;align-items:start}
+.left{display:flex;flex-direction:column;gap:18px}
+.card.message-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(212,175,55,0.08);padding:24px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.7)}
+.message-card h3{margin:0;color:var(--muted);font-size:16px}
+.message-card .message{margin-top:10px;font-size:18px;line-height:1.5;color:rgba(255,255,255,0.9)}
+.signature{margin-top:14px;font-weight:700;color:var(--accent)}
+
+
+.right{display:flex;align-items:center;justify-content:center}
+.carousel{position:relative;width:100%;max-width:520px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));padding:12px}
+.slides{display:flex;transition:transform 0.7s cubic-bezier(.2,.8,.2,1);gap:8px;width:100%}
+.slides img{width:100%;height:380px;object-fit:cover;border-radius:10px;flex-shrink:0;box-shadow:0 8px 20px rgba(2,6,23,0.6)}
+
+.nav{position:absolute;top:50%;transform:translateY(-50%);background:transparent;border:0;font-size:34px;padding:8px 12px;color:var(--gold);cursor:pointer;opacity:0.95}
+.prev{left:8px}
+.next{right:8px}
+
+.footer{display:flex;justify-content:space-between;align-items:center;color:rgba(255,255,255,0.5);font-size:13px;padding-top:6px}
+
+/* particles */
+.particles{position:absolute;left:0;top:0;right:0;height:100%;pointer-events:none;mix-blend-mode:screen;opacity:0.9}
+
+/* modal video */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);visibility:hidden;opacity:0;transition:all .25s ease}
+.modal[aria-hidden="false"]{visibility:visible;opacity:1}
+.modal-content{width:min(900px,95%);background:transparent;border-radius:12px;padding:12px;position:relative}
+.modal-close{position:absolute;right:6px;top:6px;background:transparent;border:0;color:#fff;font-size:20px;cursor:pointer}
+.video-wrap{aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden;border:2px solid rgba(212,175,55,0.12)}
+@media (max-width:900px){.main{grid-template-columns:1fr;}.slides img{height:260px}}
